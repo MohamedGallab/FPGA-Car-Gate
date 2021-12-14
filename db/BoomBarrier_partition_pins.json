@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "isObstacle",
+					"strict" : false
+				},
+				{
+					"name" : "direction",
+					"strict" : false
+				},
+				{
+					"name" : "segEnable",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "isCarWaiting",
+					"strict" : false
+				},
+				{
+					"name" : "stepOutput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stepOutput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "stepOutput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "stepOutput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "letter1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "letter1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "letter1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "letter1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "letter1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "letter1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "letter2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "letter2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "letter2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "letter2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "letter2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "letter2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "letter3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "letter3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "letter3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "letter3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "letter3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "letter3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "letter4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "letter4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "letter4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "letter4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "letter4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "letter4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IRinput",
+					"strict" : false
+				},
+				{
+					"name" : "clkFPGA",
+					"strict" : false
+				},
+				{
+					"name" : "enableClk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,4 @@
+ENTITY BoomBarrier IS
+	PORT(
+	);
+END ENTITY;

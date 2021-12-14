@@ -1,0 +1,67 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.ALL;
+
+entity Motor is
+port ( 
+	clk_in, reset, flag: in std_logic;
+	testLed, clm : buffer std_logic;
+	y        : out std_logic_vector (3 downto 0)
+	);
+end Motor;
+  
+architecture arch of Motor is
+
+    signal processLed: std_logic := '0';
+	 signal clk: std_logic;
+	 signal step: integer := 1;
+	 
+    component Clock_Divider
+        port ( 
+				clk,reset: in std_logic;
+				clock_out: out std_logic
+			);
+    end component;
+
+begin
+    clkStage : Clock_Divider port map (clk_in, reset, clm);
+	 process(clm)
+	 begin
+		if(clm='1') then
+			processLed <= not processLed;
+			if(flag = '1') then
+            case step is
+                when 1 =>
+                    y <= "0001";
+                when 2 =>
+                    y <= "0010";
+                when 3 =>
+                    y <= "0100";
+                when 4 =>
+                    y <= "1000";
+                when others =>
+                    y <= "0000";
+            end case;
+			else
+				case step is
+                when 1 =>
+                    y <= "1000";
+                when 2 =>
+                    y <= "0100";
+                when 3 =>
+                    y <= "0010";
+                when 4 =>
+                    y <= "0001";
+                when others =>
+                    y <= "0000";
+            end case;
+			end if;
+			if(step > 4) then
+				step <= 1;
+			else
+				step <= step + 1;
+			end if;
+		end if;
+		testLed <= processLed;
+	 end process;
+end arch;
