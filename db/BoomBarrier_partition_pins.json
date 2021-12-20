@@ -4,26 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "isObstacle",
-					"strict" : false
-				},
-				{
-					"name" : "direction",
-					"strict" : false
-				},
-				{
-					"name" : "segEnable",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "isCarWaiting",
-					"strict" : false
-				},
-				{
 					"name" : "stepOutput[0]",
 					"strict" : false
 				},
@@ -137,6 +117,10 @@
 				},
 				{
 					"name" : "IRinput",
+					"strict" : false
+				},
+				{
+					"name" : "ManualControl",
 					"strict" : false
 				},
 				{

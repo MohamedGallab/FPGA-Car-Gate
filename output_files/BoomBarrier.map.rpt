@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BoomBarrier
-Tue Dec 14 22:13:50 2021
+Mon Dec 20 16:53:01 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,13 +13,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +45,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 14 22:13:50 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 20 16:53:01 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; BoomBarrier                                 ;
 ; Top-level Entity Name              ; BoomBarrier                                 ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 220                                         ;
-;     Total combinational functions  ; 220                                         ;
-;     Dedicated logic registers      ; 104                                         ;
-; Total registers                    ; 104                                         ;
-; Total pins                         ; 40                                          ;
+; Total logic elements               ; 303                                         ;
+;     Total combinational functions  ; 303                                         ;
+;     Dedicated logic registers      ; 137                                         ;
+; Total registers                    ; 137                                         ;
+; Total pins                         ; 36                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -168,17 +167,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                         ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
-; BoomBarrier.vhd                  ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd   ;         ;
-; Motor.vhd                        ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/Motor.vhd         ;         ;
-; Clock_Divider.vhd                ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/Clock_Divider.vhd ;         ;
-; IR_Sensor.vhd                    ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/IR_Sensor.vhd     ;         ;
-; status7seg.vhd                   ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/status7seg.vhd    ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; BoomBarrier.vhd                  ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd   ;         ;
+; Motor.vhd                        ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/Motor.vhd         ;         ;
+; Clock_Divider.vhd                ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/Clock_Divider.vhd ;         ;
+; IR_Sensor.vhd                    ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/IR_Sensor.vhd     ;         ;
+; status7seg.vhd                   ; yes             ; User VHDL File  ; D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/status7seg.vhd    ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------+
@@ -186,30 +185,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 220                        ;
+; Estimated Total logic elements              ; 303                        ;
 ;                                             ;                            ;
-; Total combinational functions               ; 220                        ;
+; Total combinational functions               ; 303                        ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 69                         ;
-;     -- 3 input functions                    ; 15                         ;
-;     -- <=2 input functions                  ; 136                        ;
+;     -- 4 input functions                    ; 116                        ;
+;     -- 3 input functions                    ; 21                         ;
+;     -- <=2 input functions                  ; 166                        ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 127                        ;
-;     -- arithmetic mode                      ; 93                         ;
+;     -- normal mode                          ; 179                        ;
+;     -- arithmetic mode                      ; 124                        ;
 ;                                             ;                            ;
-; Total registers                             ; 104                        ;
-;     -- Dedicated logic registers            ; 104                        ;
+; Total registers                             ; 137                        ;
+;     -- Dedicated logic registers            ; 137                        ;
 ;     -- I/O registers                        ; 0                          ;
 ;                                             ;                            ;
-; I/O pins                                    ; 40                         ;
+; I/O pins                                    ; 36                         ;
 ;                                             ;                            ;
 ; Embedded Multiplier 9-bit elements          ; 0                          ;
 ;                                             ;                            ;
 ; Maximum fan-out node                        ; Clock_Divider:clkStage|tmp ;
-; Maximum fan-out                             ; 73                         ;
-; Total fan-out                               ; 970                        ;
-; Average fan-out                             ; 2.40                       ;
+; Maximum fan-out                             ; 105                        ;
+; Total fan-out                               ; 1305                       ;
+; Average fan-out                             ; 2.55                       ;
 +---------------------------------------------+----------------------------+
 
 
@@ -218,22 +217,12 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                    ; Entity Name   ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+---------------+--------------+
-; |BoomBarrier                   ; 220 (84)            ; 104 (35)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 40   ; 0            ; 0          ; |BoomBarrier                           ; BoomBarrier   ; work         ;
+; |BoomBarrier                   ; 303 (168)           ; 137 (68)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 36   ; 0            ; 0          ; |BoomBarrier                           ; BoomBarrier   ; work         ;
 ;    |Clock_Divider:clkStage|    ; 50 (50)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |BoomBarrier|Clock_Divider:clkStage    ; Clock_Divider ; work         ;
-;    |Motor:MotorPort|           ; 84 (84)             ; 36 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |BoomBarrier|Motor:MotorPort           ; Motor         ; work         ;
+;    |Motor:MotorPort|           ; 83 (83)             ; 36 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |BoomBarrier|Motor:MotorPort           ; Motor         ; work         ;
 ;    |status7seg:status7segPort| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |BoomBarrier|status7seg:status7segPort ; status7seg    ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------+
-; Registers Removed During Synthesis                              ;
-+---------------------------------------+-------------------------+
-; Register name                         ; Reason for Removal      ;
-+---------------------------------------+-------------------------+
-; segEnable~reg0                        ; Merged with enableMotor ;
-; Total Number of Removed Registers = 1 ;                         ;
-+---------------------------------------+-------------------------+
 
 
 +------------------------------------------------------+
@@ -241,12 +230,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 104   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 137   ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 33    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 67    ;
+; Number of registers using Clock Enable       ; 79    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -256,14 +245,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; enableMotor                            ; 53      ;
+; Motor:MotorPort|step[0]                ; 5       ;
+; enableMotor                            ; 37      ;
 ; timer[9]                               ; 3       ;
 ; timer[6]                               ; 3       ;
 ; timer[3]                               ; 3       ;
 ; timer[4]                               ; 3       ;
 ; Clock_Divider:clkStage|count[0]        ; 3       ;
-; Motor:MotorPort|step[0]                ; 6       ;
-; Total number of inverted registers = 7 ;         ;
+; WaitTimer[0]                           ; 2       ;
+; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
 
 
@@ -272,8 +262,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |BoomBarrier|timer[24]     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |BoomBarrier|timer[3]      ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |BoomBarrier|WaitTimer[3]  ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |BoomBarrier|timer[16]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |BoomBarrier|timer[6]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -282,23 +273,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 40                          ;
-; cycloneiii_ff         ; 104                         ;
+; boundary_port         ; 36                          ;
+; cycloneiii_ff         ; 137                         ;
 ;     CLR               ; 33                          ;
-;     ENA               ; 67                          ;
-;     plain             ; 4                           ;
-; cycloneiii_lcell_comb ; 223                         ;
-;     arith             ; 93                          ;
-;         2 data inputs ; 93                          ;
-;     normal            ; 130                         ;
+;     ENA               ; 79                          ;
+;     SCLR              ; 1                           ;
+;     plain             ; 24                          ;
+; cycloneiii_lcell_comb ; 305                         ;
+;     arith             ; 124                         ;
+;         2 data inputs ; 124                         ;
+;     normal            ; 181                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 39                          ;
-;         3 data inputs ; 15                          ;
-;         4 data inputs ; 69                          ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 116                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 4.11                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -317,47 +309,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Dec 14 22:13:41 2021
+    Info: Processing started: Mon Dec 20 16:52:50 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BoomBarrier -c BoomBarrier
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file boombarrier.vhd
-    Info (12022): Found design unit 1: BoomBarrier-arch File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 18
-    Info (12023): Found entity 1: BoomBarrier File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 5
+    Info (12022): Found design unit 1: BoomBarrier-arch File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 15
+    Info (12023): Found entity 1: BoomBarrier File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file motor.vhd
-    Info (12022): Found design unit 1: Motor-arch File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/Motor.vhd Line: 13
-    Info (12023): Found entity 1: Motor File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/Motor.vhd Line: 5
+    Info (12022): Found design unit 1: Motor-arch File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/Motor.vhd Line: 13
+    Info (12023): Found entity 1: Motor File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/Motor.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
-    Info (12022): Found design unit 1: Clock_Divider-bhv File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/Clock_Divider.vhd Line: 12
-    Info (12023): Found entity 1: Clock_Divider File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/Clock_Divider.vhd Line: 5
+    Info (12022): Found design unit 1: Clock_Divider-bhv File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/Clock_Divider.vhd Line: 12
+    Info (12023): Found entity 1: Clock_Divider File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/Clock_Divider.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ir_sensor.vhd
-    Info (12022): Found design unit 1: IR_Sensor-arch File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/IR_Sensor.vhd Line: 11
-    Info (12023): Found entity 1: IR_Sensor File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/IR_Sensor.vhd Line: 4
+    Info (12022): Found design unit 1: IR_Sensor-arch File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/IR_Sensor.vhd Line: 11
+    Info (12023): Found entity 1: IR_Sensor File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/IR_Sensor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file status7seg.vhd
-    Info (12022): Found design unit 1: status7seg-arch File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/status7seg.vhd Line: 11
-    Info (12023): Found entity 1: status7seg File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/status7seg.vhd Line: 4
+    Info (12022): Found design unit 1: status7seg-arch File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/status7seg.vhd Line: 11
+    Info (12023): Found entity 1: status7seg File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/status7seg.vhd Line: 4
 Info (12127): Elaborating entity "BoomBarrier" for the top level hierarchy
-Info (12128): Elaborating entity "Clock_Divider" for hierarchy "Clock_Divider:clkStage" File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 53
-Warning (10492): VHDL Process Statement warning at Clock_Divider.vhd(31): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/Clock_Divider.vhd Line: 31
-Info (12128): Elaborating entity "Motor" for hierarchy "Motor:MotorPort" File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 54
-Info (12128): Elaborating entity "IR_Sensor" for hierarchy "IR_Sensor:SensorPort" File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 55
-Info (12128): Elaborating entity "status7seg" for hierarchy "status7seg:status7segPort" File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 56
+Info (12128): Elaborating entity "Clock_Divider" for hierarchy "Clock_Divider:clkStage" File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at Clock_Divider.vhd(31): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/Clock_Divider.vhd Line: 31
+Info (12128): Elaborating entity "Motor" for hierarchy "Motor:MotorPort" File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 54
+Info (12128): Elaborating entity "IR_Sensor" for hierarchy "IR_Sensor:SensorPort" File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 55
+Info (12128): Elaborating entity "status7seg" for hierarchy "status7seg:status7segPort" File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 56
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "letter1[6]" is stuck at VCC File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 13
-    Warning (13410): Pin "letter2[2]" is stuck at VCC File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 13
-    Warning (13410): Pin "letter3[1]" is stuck at VCC File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 13
-    Warning (13410): Pin "letter4[1]" is stuck at VCC File: D:/Uni/Winter 2021/Digital System Design CSEN 605/My Quartus Projects/Boom barrier/BoomBarrier.vhd Line: 13
+    Warning (13410): Pin "letter1[6]" is stuck at VCC File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 10
+    Warning (13410): Pin "letter2[2]" is stuck at VCC File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 10
+    Warning (13410): Pin "letter3[1]" is stuck at VCC File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 10
+    Warning (13410): Pin "letter4[1]" is stuck at VCC File: D:/Uni/Winter 2021/Digital System Design CSEN 605/Project/Team 6 Assignment and project/Team 6/Boom barrier/BoomBarrier.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 260 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 37 output pins
-    Info (21061): Implemented 220 logic cells
+Info (21057): Implemented 339 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 303 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Tue Dec 14 22:13:50 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Mon Dec 20 16:53:01 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:18
 
 

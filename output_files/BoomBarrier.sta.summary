@@ -2,20 +2,20 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'clkFPGA'
-Slack : -4.217
-TNS   : -64.595
-
 Type  : Slow 1200mV 85C Model Setup 'Clock_Divider:clkStage|tmp'
-Slack : -3.796
-TNS   : -235.414
+Slack : -4.582
+TNS   : -416.304
+
+Type  : Slow 1200mV 85C Model Setup 'clkFPGA'
+Slack : -4.194
+TNS   : -61.973
 
 Type  : Slow 1200mV 85C Model Hold 'Clock_Divider:clkStage|tmp'
-Slack : 0.322
+Slack : 0.324
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clkFPGA'
-Slack : 0.646
+Slack : 0.645
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkFPGA'
@@ -24,18 +24,18 @@ TNS   : -49.299
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock_Divider:clkStage|tmp'
 Slack : -1.403
-TNS   : -99.613
-
-Type  : Slow 1200mV 0C Model Setup 'clkFPGA'
-Slack : -3.821
-TNS   : -55.594
+TNS   : -145.912
 
 Type  : Slow 1200mV 0C Model Setup 'Clock_Divider:clkStage|tmp'
-Slack : -3.458
-TNS   : -212.003
+Slack : -4.119
+TNS   : -374.964
+
+Type  : Slow 1200mV 0C Model Setup 'clkFPGA'
+Slack : -3.811
+TNS   : -52.878
 
 Type  : Slow 1200mV 0C Model Hold 'Clock_Divider:clkStage|tmp'
-Slack : 0.289
+Slack : 0.292
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clkFPGA'
@@ -48,30 +48,30 @@ TNS   : -49.299
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock_Divider:clkStage|tmp'
 Slack : -1.403
-TNS   : -99.613
-
-Type  : Fast 1200mV 0C Model Setup 'clkFPGA'
-Slack : -1.319
-TNS   : -8.022
+TNS   : -145.912
 
 Type  : Fast 1200mV 0C Model Setup 'Clock_Divider:clkStage|tmp'
-Slack : -1.019
-TNS   : -56.797
+Slack : -1.341
+TNS   : -112.262
+
+Type  : Fast 1200mV 0C Model Setup 'clkFPGA'
+Slack : -1.330
+TNS   : -6.901
 
 Type  : Fast 1200mV 0C Model Hold 'Clock_Divider:clkStage|tmp'
-Slack : 0.139
+Slack : 0.142
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clkFPGA'
-Slack : 0.250
+Slack : 0.249
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkFPGA'
 Slack : -3.000
-TNS   : -37.137
+TNS   : -37.122
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock_Divider:clkStage|tmp'
 Slack : -1.000
-TNS   : -71.000
+TNS   : -104.000
 
 ------------------------------------------------------------

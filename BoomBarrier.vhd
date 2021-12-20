@@ -1,91 +1,105 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.numeric_std.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 ENTITY BoomBarrier IS
 
 	PORT(
-		clkFPGA, enableClk, IRinput: in std_logic;
-		isObstacle, direction, segEnable : buffer std_logic;
-		clk : buffer std_logic;
-		isCarWaiting : buffer std_logic := '0';
-		stepOutput : out std_logic_vector (3 downto 0);
-		letter1, letter2, letter3, letter4 : out std_logic_vector(0 to 6)
+		clkFPGA, enableClk, IRinput, ManualControl: IN STD_LOGIC;
+		stepOutput : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+		letter1, letter2, letter3, letter4 : OUT STD_LOGIC_VECTOR(0 to 6)
 	);
 	
 END ENTITY;
 
-architecture arch of BoomBarrier is
+ARCHITECTURE arch OF BoomBarrier IS
 
-	component Motor
+	COMPONENT Motor
 		PORT(
-			clk, enable, direction: in std_logic;
-			stepOutput : out std_logic_vector (3 downto 0)
+			clk, enable, direction: IN STD_LOGIC;
+			stepOutput : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
 		);
-	end component;
+	END COMPONENT;
 	
-	component IR_Sensor
+	COMPONENT IR_Sensor
 		PORT(
-			inputFromSensor : in std_logic;
-			output : out std_logic
+			inputFromSensor : IN STD_LOGIC;
+			output : OUT STD_LOGIC
 		);
-	end component;
+	END COMPONENT;
 	
-	component Clock_Divider
-        port ( 
-				clk, reset: in std_logic;
-				clock_out: out std_logic
-			);
-    end component;
-	 
-	 component status7seg
-		port (
-			status, enable : in std_logic;
-			letter1, letter2, letter3, letter4 : out std_logic_vector(0 to 6)
+	COMPONENT Clock_Divider
+	  PORT( 
+			clk, reset: IN STD_LOGIC;
+			clock_out: OUT STD_LOGIC
 		);
-	 end component;
-	 
-	 signal timer : integer := 6e2;
-	 signal enableMotor : std_logic := '1';
-	
-begin
+	END COMPONENT;
 
-	clkStage : Clock_Divider port map (clkFPGA, enableClk, clk);
+	COMPONENT status7seg
+		PORT (
+			status, enable : IN STD_LOGIC;
+			letter1, letter2, letter3, letter4 : OUT STD_LOGIC_VECTOR(0 to 6)
+		);
+	END COMPONENT;
+
+	SIGNAL clk, isObstacle, direction, segEnable : STD_LOGIC;
+	SIGNAL timer : INTEGER := 6e2;
+	SIGNAL WaitTimer : INTEGER := 1;
+	SIGNAL enableMotor : STD_LOGIC := '1';	
+	SIGNAL isCarWaiting : STD_LOGIC := '0';
+	
+BEGIN
+
+	clkStage : Clock_Divider PORT MAP (clkFPGA, enableClk, clk);
 	MotorPort : Motor PORT MAP (clk, enableMotor, direction, stepOutput);
 	SensorPort : IR_Sensor PORT MAP (IRinput, isObstacle);
 	status7segPort : status7seg PORT MAP (direction, segEnable, letter1, letter2, letter3, letter4);
 	
-	process(clk)
-	begin
-		if(rising_edge(clk)) then
-			
-			-- car comes
-			if(isObstacle = '1' and isCarWaiting = '0' and timer > 6e2) then
-				isCarWaiting <= '1';
-				timer <= 1;
+	PROCESS(clk)
+	BEGIN
+		IF(rising_edge(clk)) THEN
+		
+			IF(ManualControl = '1') THEN
 				enableMotor <= '1';
-				segEnable <= '1';
-			
-			-- care left
-			elsif(isObstacle = '0' and isCarWaiting = '1' and timer > 6e2) then
-				isCarWaiting <= '0';
-				timer <= 1;
-				enableMotor <= '1';
-				segEnable <= '1';
-			
-			-- if about to stop then switch direction
-			elsif(timer = 6e2) then
-				direction <= not direction;
-				timer <= timer + 1;
-			
-			-- stop after passing timer
-			elsif(timer > 6e2) then
-				enableMotor <= '0';
-				segEnable <= '0';
-			else
-				timer <= timer + 1;
-			end if;
-		end if;
-	end process;
+				direction <= '0';
+			ELSE
+				-- car comes
+				IF(isObstacle = '1' and isCarWaiting = '0' and timer > 6e2) THEN
+					isCarWaiting <= '1';
+					timer <= 1;
+					enableMotor <= '1';
+					segEnable <= '1';
+					waitTimer <= 1;
+				
+				-- wait for car to leave
+				ELSIF(isObstacle = '0' and isCarWaiting = '1' and timer > 6e2 and waitTimer < 3e2) then
+					waitTimer <= waitTimer + 1;
+					enableMotor <= '0';
+				
+				-- car left
+				ELSIF(isObstacle = '0' and isCarWaiting = '1' and timer > 6e2) THEN
+					isCarWaiting <= '0';
+					timer <= 1;
+					enableMotor <= '1';
+					segEnable <= '1';
+				
+				-- IF about to stop then switch direction
+				ELSIF(timer = 6e2) THEN
+					direction <= not direction;
+					timer <= timer + 1;
+				
+				-- stop after passing timer
+				ELSIF(timer > 6e2) THEN
+					enableMotor <= '0';
+					segEnable <= '0';
+					
+				-- increment timer
+				ELSE
+					timer <= timer + 1;
+				END IF;
+				
+			END IF;
+		END IF;
+	END PROCESS;
 	
-end arch;
+END arch;

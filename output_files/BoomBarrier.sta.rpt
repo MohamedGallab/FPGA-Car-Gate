@@ -1,5 +1,5 @@
 Timing Analyzer report for BoomBarrier
-Tue Dec 14 22:14:07 2021
+Mon Dec 20 16:53:25 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -92,13 +92,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.12        ;
+; Average used               ; 1.09        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.4%      ;
-;     Processors 3-6         ;   2.3%      ;
+;     Processors 2-6         ;   1.9%      ;
 +----------------------------+-------------+
 
 
@@ -117,8 +116,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                 ; Note ;
 +------------+-----------------+----------------------------+------+
-; 191.68 MHz ; 191.68 MHz      ; clkFPGA                    ;      ;
-; 208.51 MHz ; 208.51 MHz      ; Clock_Divider:clkStage|tmp ;      ;
+; 179.15 MHz ; 179.15 MHz      ; Clock_Divider:clkStage|tmp ;      ;
+; 192.53 MHz ; 192.53 MHz      ; clkFPGA                    ;      ;
 +------------+-----------------+----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -128,8 +127,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clkFPGA                    ; -4.217 ; -64.595       ;
-; Clock_Divider:clkStage|tmp ; -3.796 ; -235.414      ;
+; Clock_Divider:clkStage|tmp ; -4.582 ; -416.304      ;
+; clkFPGA                    ; -4.194 ; -61.973       ;
 +----------------------------+--------+---------------+
 
 
@@ -138,8 +137,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------+-------+---------------+
 ; Clock                      ; Slack ; End Point TNS ;
 +----------------------------+-------+---------------+
-; Clock_Divider:clkStage|tmp ; 0.322 ; 0.000         ;
-; clkFPGA                    ; 0.646 ; 0.000         ;
+; Clock_Divider:clkStage|tmp ; 0.324 ; 0.000         ;
+; clkFPGA                    ; 0.645 ; 0.000         ;
 +----------------------------+-------+---------------+
 
 
@@ -161,7 +160,7 @@ No paths to report.
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
 ; clkFPGA                    ; -3.000 ; -49.299       ;
-; Clock_Divider:clkStage|tmp ; -1.403 ; -99.613       ;
+; Clock_Divider:clkStage|tmp ; -1.403 ; -145.912      ;
 +----------------------------+--------+---------------+
 
 
@@ -176,8 +175,8 @@ No synchronizer chains to report.
 +------------+-----------------+----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                 ; Note ;
 +------------+-----------------+----------------------------+------+
-; 207.43 MHz ; 207.43 MHz      ; clkFPGA                    ;      ;
-; 224.32 MHz ; 224.32 MHz      ; Clock_Divider:clkStage|tmp ;      ;
+; 195.35 MHz ; 195.35 MHz      ; Clock_Divider:clkStage|tmp ;      ;
+; 207.86 MHz ; 207.86 MHz      ; clkFPGA                    ;      ;
 +------------+-----------------+----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -187,8 +186,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clkFPGA                    ; -3.821 ; -55.594       ;
-; Clock_Divider:clkStage|tmp ; -3.458 ; -212.003      ;
+; Clock_Divider:clkStage|tmp ; -4.119 ; -374.964      ;
+; clkFPGA                    ; -3.811 ; -52.878       ;
 +----------------------------+--------+---------------+
 
 
@@ -197,7 +196,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------+-------+---------------+
 ; Clock                      ; Slack ; End Point TNS ;
 +----------------------------+-------+---------------+
-; Clock_Divider:clkStage|tmp ; 0.289 ; 0.000         ;
+; Clock_Divider:clkStage|tmp ; 0.292 ; 0.000         ;
 ; clkFPGA                    ; 0.597 ; 0.000         ;
 +----------------------------+-------+---------------+
 
@@ -220,7 +219,7 @@ No paths to report.
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
 ; clkFPGA                    ; -3.000 ; -49.299       ;
-; Clock_Divider:clkStage|tmp ; -1.403 ; -99.613       ;
+; Clock_Divider:clkStage|tmp ; -1.403 ; -145.912      ;
 +----------------------------+--------+---------------+
 
 
@@ -235,8 +234,8 @@ No synchronizer chains to report.
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clkFPGA                    ; -1.319 ; -8.022        ;
-; Clock_Divider:clkStage|tmp ; -1.019 ; -56.797       ;
+; Clock_Divider:clkStage|tmp ; -1.341 ; -112.262      ;
+; clkFPGA                    ; -1.330 ; -6.901        ;
 +----------------------------+--------+---------------+
 
 
@@ -245,8 +244,8 @@ No synchronizer chains to report.
 +----------------------------+-------+---------------+
 ; Clock                      ; Slack ; End Point TNS ;
 +----------------------------+-------+---------------+
-; Clock_Divider:clkStage|tmp ; 0.139 ; 0.000         ;
-; clkFPGA                    ; 0.250 ; 0.000         ;
+; Clock_Divider:clkStage|tmp ; 0.142 ; 0.000         ;
+; clkFPGA                    ; 0.249 ; 0.000         ;
 +----------------------------+-------+---------------+
 
 
@@ -267,8 +266,8 @@ No paths to report.
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; clkFPGA                    ; -3.000 ; -37.137       ;
-; Clock_Divider:clkStage|tmp ; -1.000 ; -71.000       ;
+; clkFPGA                    ; -3.000 ; -37.122       ;
+; Clock_Divider:clkStage|tmp ; -1.000 ; -104.000      ;
 +----------------------------+--------+---------------+
 
 
@@ -283,12 +282,12 @@ No synchronizer chains to report.
 +-----------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                       ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-----------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack            ; -4.217   ; 0.139 ; N/A      ; N/A     ; -3.000              ;
-;  Clock_Divider:clkStage|tmp ; -3.796   ; 0.139 ; N/A      ; N/A     ; -1.403              ;
-;  clkFPGA                    ; -4.217   ; 0.250 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS             ; -300.009 ; 0.0   ; 0.0      ; 0.0     ; -148.912            ;
-;  Clock_Divider:clkStage|tmp ; -235.414 ; 0.000 ; N/A      ; N/A     ; -99.613             ;
-;  clkFPGA                    ; -64.595  ; 0.000 ; N/A      ; N/A     ; -49.299             ;
+; Worst-case Slack            ; -4.582   ; 0.142 ; N/A      ; N/A     ; -3.000              ;
+;  Clock_Divider:clkStage|tmp ; -4.582   ; 0.142 ; N/A      ; N/A     ; -1.403              ;
+;  clkFPGA                    ; -4.194   ; 0.249 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS             ; -478.277 ; 0.0   ; 0.0      ; 0.0     ; -195.211            ;
+;  Clock_Divider:clkStage|tmp ; -416.304 ; 0.000 ; N/A      ; N/A     ; -145.912            ;
+;  clkFPGA                    ; -61.973  ; 0.000 ; N/A      ; N/A     ; -49.299             ;
 +-----------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -297,11 +296,6 @@ No synchronizer chains to report.
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
-; isObstacle    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; direction     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; segEnable     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; clk           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; isCarWaiting  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; stepOutput[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; stepOutput[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; stepOutput[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -344,6 +338,7 @@ No synchronizer chains to report.
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
 ; IRinput             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; ManualControl       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clkFPGA             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; enableClk           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -361,11 +356,6 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; isObstacle    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; direction     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; segEnable     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; clk           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; isCarWaiting  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; stepOutput[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; stepOutput[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0773 V           ; 0.156 V                              ; 0.166 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0773 V          ; 0.156 V                             ; 0.166 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; stepOutput[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
@@ -407,11 +397,6 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; isObstacle    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; direction     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; segEnable     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; clk           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; isCarWaiting  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; stepOutput[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
 ; stepOutput[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0449 V           ; 0.201 V                              ; 0.093 V                              ; 4.89e-10 s                  ; 5.81e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0449 V          ; 0.201 V                             ; 0.093 V                             ; 4.89e-10 s                 ; 5.81e-10 s                 ; Yes                       ; No                        ;
 ; stepOutput[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
@@ -453,11 +438,6 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; isObstacle    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; direction     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; segEnable     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; clk           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; isCarWaiting  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; stepOutput[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; stepOutput[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.77 V              ; -0.0486 V           ; 0.285 V                              ; 0.06 V                               ; 2.8e-10 s                   ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.77 V             ; -0.0486 V          ; 0.285 V                             ; 0.06 V                              ; 2.8e-10 s                  ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; stepOutput[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
@@ -501,7 +481,7 @@ No synchronizer chains to report.
 +----------------------------+----------------------------+----------+----------+----------+----------+
 ; clkFPGA                    ; clkFPGA                    ; 752      ; 0        ; 0        ; 0        ;
 ; Clock_Divider:clkStage|tmp ; clkFPGA                    ; 1        ; 1        ; 0        ; 0        ;
-; Clock_Divider:clkStage|tmp ; Clock_Divider:clkStage|tmp ; 5547     ; 0        ; 0        ; 0        ;
+; Clock_Divider:clkStage|tmp ; Clock_Divider:clkStage|tmp ; 13360    ; 0        ; 0        ; 0        ;
 +----------------------------+----------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -513,7 +493,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------+----------------------------+----------+----------+----------+----------+
 ; clkFPGA                    ; clkFPGA                    ; 752      ; 0        ; 0        ; 0        ;
 ; Clock_Divider:clkStage|tmp ; clkFPGA                    ; 1        ; 1        ; 0        ; 0        ;
-; Clock_Divider:clkStage|tmp ; Clock_Divider:clkStage|tmp ; 5547     ; 0        ; 0        ; 0        ;
+; Clock_Divider:clkStage|tmp ; Clock_Divider:clkStage|tmp ; 13360    ; 0        ; 0        ; 0        ;
 +----------------------------+----------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -537,10 +517,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 68    ; 68   ;
-; Unconstrained Output Ports      ; 33    ; 33   ;
-; Unconstrained Output Port Paths ; 44    ; 44   ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 169   ; 169  ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 39    ; 39   ;
 +---------------------------------+-------+------+
 
 
@@ -554,14 +534,15 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +----------------------------+----------------------------+------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; IRinput    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; enableClk  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; IRinput       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ManualControl ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; enableClk     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -569,10 +550,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------+---------------------------------------------------------------------------------------+
 ; Output Port   ; Comment                                                                               ;
 +---------------+---------------------------------------------------------------------------------------+
-; clk           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; direction     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; isCarWaiting  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; isObstacle    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter1[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter1[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter1[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -597,7 +574,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; letter4[4]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter4[5]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter4[6]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; segEnable     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; stepOutput[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; stepOutput[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; stepOutput[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -605,14 +581,15 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------+---------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; IRinput    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; enableClk  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; IRinput       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ManualControl ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; enableClk     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -620,10 +597,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------+---------------------------------------------------------------------------------------+
 ; Output Port   ; Comment                                                                               ;
 +---------------+---------------------------------------------------------------------------------------+
-; clk           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; direction     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; isCarWaiting  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; isObstacle    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter1[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter1[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter1[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -648,7 +621,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; letter4[4]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter4[5]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; letter4[6]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; segEnable     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; stepOutput[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; stepOutput[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; stepOutput[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -662,7 +634,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Dec 14 22:14:05 2021
+    Info: Processing started: Mon Dec 20 16:53:21 2021
 Info: Command: quartus_sta BoomBarrier -c BoomBarrier
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -680,37 +652,37 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.217
+Info (332146): Worst-case setup slack is -4.582
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.217             -64.595 clkFPGA 
-    Info (332119):    -3.796            -235.414 Clock_Divider:clkStage|tmp 
-Info (332146): Worst-case hold slack is 0.322
+    Info (332119):    -4.582            -416.304 Clock_Divider:clkStage|tmp 
+    Info (332119):    -4.194             -61.973 clkFPGA 
+Info (332146): Worst-case hold slack is 0.324
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.322               0.000 Clock_Divider:clkStage|tmp 
-    Info (332119):     0.646               0.000 clkFPGA 
+    Info (332119):     0.324               0.000 Clock_Divider:clkStage|tmp 
+    Info (332119):     0.645               0.000 clkFPGA 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -49.299 clkFPGA 
-    Info (332119):    -1.403             -99.613 Clock_Divider:clkStage|tmp 
+    Info (332119):    -1.403            -145.912 Clock_Divider:clkStage|tmp 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.821
+Info (332146): Worst-case setup slack is -4.119
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.821             -55.594 clkFPGA 
-    Info (332119):    -3.458            -212.003 Clock_Divider:clkStage|tmp 
-Info (332146): Worst-case hold slack is 0.289
+    Info (332119):    -4.119            -374.964 Clock_Divider:clkStage|tmp 
+    Info (332119):    -3.811             -52.878 clkFPGA 
+Info (332146): Worst-case hold slack is 0.292
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.289               0.000 Clock_Divider:clkStage|tmp 
+    Info (332119):     0.292               0.000 Clock_Divider:clkStage|tmp 
     Info (332119):     0.597               0.000 clkFPGA 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
@@ -718,33 +690,33 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -49.299 clkFPGA 
-    Info (332119):    -1.403             -99.613 Clock_Divider:clkStage|tmp 
+    Info (332119):    -1.403            -145.912 Clock_Divider:clkStage|tmp 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.319
+Info (332146): Worst-case setup slack is -1.341
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.319              -8.022 clkFPGA 
-    Info (332119):    -1.019             -56.797 Clock_Divider:clkStage|tmp 
-Info (332146): Worst-case hold slack is 0.139
+    Info (332119):    -1.341            -112.262 Clock_Divider:clkStage|tmp 
+    Info (332119):    -1.330              -6.901 clkFPGA 
+Info (332146): Worst-case hold slack is 0.142
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.139               0.000 Clock_Divider:clkStage|tmp 
-    Info (332119):     0.250               0.000 clkFPGA 
+    Info (332119):     0.142               0.000 Clock_Divider:clkStage|tmp 
+    Info (332119):     0.249               0.000 clkFPGA 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -37.137 clkFPGA 
-    Info (332119):    -1.000             -71.000 Clock_Divider:clkStage|tmp 
+    Info (332119):    -3.000             -37.122 clkFPGA 
+    Info (332119):    -1.000            -104.000 Clock_Divider:clkStage|tmp 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Tue Dec 14 22:14:07 2021
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Mon Dec 20 16:53:25 2021
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 
